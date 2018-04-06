@@ -1,23 +1,111 @@
 <!DOCTYPE html>
 <html>
- 
+
 <head>
-    <title>Sign Up</title>
+    <meta charset="UTF-8">
+    <title>Voting APP Sign Up</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://bootswatch.com/4/united/bootstrap.min.css">
 </head>
- 
+
 <body>
-    <form id="signup" name="signup" method="post" action="/signup">
-        <label for="email">Email Address</label>
-        <input class="text" name="email" type="email" />
-        <label for="firstname">Firstname</label>
-        <input name="firstname" type="text" />
-        <label for="lastname">Lastname</label>
-        <input name="lastname" type="text" />
-        <label for="password">Password</label>
-        <input name="password" type="password" />
-        <input class="btn" type="submit" value="Sign Up" />
-    </form>
- 
+    <div class="wrapper">
+        <div class="container">
+            <h1>Voting App</h1>
+            <div class="row">
+                <div class="card effect__click">
+                    <div class="card__front">
+                        <br>
+                        <h5 class="form-title">Login Here</h5>
+                        <br>
+                        <form action="/signin" method="post">
+                            <div class="row">
+                                <div class="col-md-11">{{#if error}}Error: {{error}}{{/if}}
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" required="" name="username" placeholder="Username" value="">
+                                        <span class="help-block">*Required</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-11">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" required="" name="password" placeholder="Password" value="">
+                                        <span class="help-block">*Required</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-outline-success">Submit</button>
+                            <br>
+                            <hr>
+                            <h5>New to Beat Bot? Sign up here!</h5>
+                            <br>
+                            <button type="button" id="toggle" class="btn btn-outline-success">Create Account</button>
+                        </form>
+                    </div>
+
+                    <div class="card__back">
+                        <br>
+                        <h5 class="form-title">Create Account</h5>
+                        <br>
+                        <form action="/signup" method="post">
+                            <div class="row">
+                                <div class="col-md-11">{{#if error}}Error: {{error}}{{/if}}
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" required="" name="username" placeholder="Username" value="">
+                                        <span class="help-block">*Required</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-11">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" required="" name="email" placeholder="Email Address" value="">
+                                        <span class="help-block">*Required</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-11">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" required="" name="password" placeholder="Password" value="">
+                                        <span class="help-block">*Required</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <button type="submit" class="btn btn-outline-success">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{!--
+        <form id="signup" name="signup" method="post" action="/signup">
+            <label for="email">Email Address</label>
+            <input class="text" name="email" type="email" />
+            <label for="firstname">Firstname</label>
+            <input name="firstname" type="text" />
+            <label for="lastname">Lastname</label>
+            <input name="lastname" type="text" />
+            <label for="password">Password</label>
+            <input name="password" type="password" />
+            <input class="btn" type="submit" value="Sign Up" />
+        </form> --}}
+        <!-- Bootstrap jQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+            crossorigin="anonymous"></script>
+        <!-- Font awesome -->
+        <script src="https://use.fontawesome.com/62f4e174f3.js"></script>
 </body>
- 
+
 </html>
