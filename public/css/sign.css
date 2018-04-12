@@ -27,10 +27,10 @@
 
 h1 {
     font-size: 50px;
-    color: #79d54f;
+    color: #17a2b8;
 }
 
-h6 {
+h6,h5 {
     font-size: 18px;
     color: white;
 }
@@ -51,13 +51,18 @@ body {
     margin-left: 20px;
 }
 
-.btn-outline-success {
-    color: #79d54f;
-    border-color: #79d54f;  
-} .btn-outline-success:hover {
-    background: #79d54f;
-} .btn-outline-success:focus {
-    background: #79d54f;
+.btn-primary {
+    color: #772953;
+    border-color: #772953;
+    font-size: 15px;
+}
+
+.btn-primary:hover {
+    background: #772953;
+}
+
+.btn-primary:focus {
+    background: #772953;
 }
 
 .help-block {
@@ -72,41 +77,45 @@ body {
     margin-top: 15px;
     width: 100%;
     text-align: center;
-  }
-  
-  .card__front,
-  .card__back {
+}
+
+.card__front,
+.card__back {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-  }
-  
-  .card__front,
-  .card__back {
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-    -webkit-transition: -webkit-transform 0.6s;
-            transition: transform 0.6s;
-  }
-  
-  .card__front {
-    background-color: #f5f5f5;
-  }
-  
-  .card__back {
-    background-color: #f5f5f5;
-    -webkit-transform: rotateY(-180deg);
-            transform: rotateY(-180deg);
-  }
+}
 
-  .card.effect__click.flipped .card__front {
+.card__front,
+.card__back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: -webkit-transform 0.6s;
+    transition: transform 0.6s;
+}
+
+.card__front {
+    background-color: #772953;
+}
+
+.card__back {
+    background-color: #772953;
     -webkit-transform: rotateY(-180deg);
-            transform: rotateY(-180deg);
-  }
-  
-  .card.effect__click.flipped .card__back {
+    transform: rotateY(-180deg);
+}
+
+.card.effect__click.flipped .card__front {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+
+.card.effect__click.flipped .card__back {
     -webkit-transform: rotateY(0);
-            transform: rotateY(0);
-  }
+    transform: rotateY(0);
+}
+
+#main-heading {
+    border-bottom: 10px dotted #E95420;
+}
